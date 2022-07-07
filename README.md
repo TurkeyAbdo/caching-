@@ -16,22 +16,21 @@ Trading off capacity for speed, a cache typically stores a subset of data transi
 
 ## How to node cache
 
-```
-import nodeCache from 'node-cache';
-import fetch from 'node-fetch';
+```javascript
+import nodeCache from "node-cache";
+import fetch from "node-fetch";
 
-const myCache = new nodeCache({stdTTL:10});
-const todoURL = 'https://jsonplaceholder.typicode.com/todos';
+const myCache = new nodeCache({ stdTTL: 10 });
+const todoURL = "https://jsonplaceholder.typicode.com/todos";
 
-if(myCache.has('todos')) {
-    return myCache.get('todos')
-}else{
-    fetch(todoURL)
-    .then(res => res.json)
-    .then(data => {
-        myCache.set('todos',data)
-        return data
-    })
+if (myCache.has("todos")) {
+  return myCache.get("todos");
+} else {
+  fetch(todoURL)
+    .then((res) => res.json)
+    .then((data) => {
+      myCache.set("todos", data);
+      return data;
+    });
 }
-
 ```
