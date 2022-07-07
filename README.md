@@ -34,3 +34,8 @@ if (myCache.has("todos")) {
     });
 }
 ```
+
+######resourses
+https://aws.amazon.com/caching/
+https://www.youtube.com/watch?v=ae617vL5DyM
+https://www.youtube.com/results?search_query=node+caching+explain
