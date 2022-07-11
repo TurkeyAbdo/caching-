@@ -54,7 +54,7 @@ const cacheMiddle = (req,res,next) => {
     })
 }
 
-app.get("/users/:username", cacheMiddle,getRepos)
+app.get("/users/:username", cacheMiddle ,getRepos)
 
 app.listen(PORT|| 5000 , () => {
     console.log(`app is listening at PORT ${PORT}`)
